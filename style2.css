@@ -46,7 +46,11 @@ img:hover{
 }
 .video{
 	display: grid;
+
 }
 video{
 	margin: 20px 20px 20px 20px;
+}
+@-ms-viewport{
+  width: device-width;
 }
