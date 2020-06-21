@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="shortcut icon" type="image/png" href="./icon.png"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="./icon.png">
 	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="style2.css">
 	<meta charset="UTF-8">
-	<title>VIRTUAL CLASSROOMS</title>
+	<link rel="stylesheet" href="style2.css">
+  <title>St Thomas Sunday School Vaniyapilly</title>
 </head>
 <body>
-	<div id="particles-js" ></div>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.html"><h4>Home </h4><span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="about.html"><h4>Inaguration</h4></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="classrooms.html"><h4>Virtual Classes</h4></a>
-      </li>
-    </ul>
+  
+  <div id="particles-js" style="align-content: center;" ></div>
+  <nav style="background-color: grey;height: 30px;">
+    <a href="index.html">HOME</a> | <a href="about.html">Inaguration</a> 
+  </nav>
+  <div class="container">
+    <video id="vdo" width="95%" height="99%" controls>
+      <source id="vSrca" type="video/mp4">
+      <source id="vSrcb" type="video/ogg">
+      Your browser does not support the video tag.
+    </video>
   </div>
-</nav>
-	<h2>CLASS 12-Gospels</h2>
-	<div class="container">
-		
-	<video width="95%" height="99%" controls>
-  <source src="./Videos/1_Gospels-A-Study_Small.mp4" type="video/mp4">
-  <source src="./Videos/1_Gospels-A-Study_Small.mp4" type="video/ogg">
-Your browser does not support the video tag.
-</video>
-</div>
+  <script>
+    function getQs () {
+      debugger;
+      var urlParams = new URLSearchParams(window.location.search);
+      var myParam = urlParams.get('gPath');
+      return myParam;
+    };
+
+    var vid = document.getElementById("vdo");
+
+    isSupp = vid.canPlayType("video/mp4");
+    if (isSupp == "") {
+      vid.src = getQs();
+    } else {
+      vid.src =  getQs();
+    }
+    vid.load();
+
+    //alert(document.getElementById("v1").src);
+  </script>
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
